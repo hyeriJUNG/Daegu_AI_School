@@ -1,0 +1,15 @@
+.science-lists {list-style: none;}
+.science-lists .science-list a {color: #000000;	text-decoration: none;}
+.science-lists .science-list .science-info .type {color: #225ac6;font-size: 12px;
+	font-weight: 700;}
+.science-lists .science-list .science-info .title {font-size: 13px;	color: #202020;
+	font-weight: bold;}
+.science-lists .science-list .science-info .paragraph {color: #404040;font-size: 13px;
+	line-height: 20px;}
+.science-lists .science-list .science-info .date-wrap .source {color: #505050;
+	font-size: 12px;}
+.science-lists .science-list .science-info .date-wrap .date {color: #808080;
+	font-size: 12px;}
+.science-lists .science-list .science-info .date-wrap .date:before {content:'·' ;}
+.science-lists .science-list a:hover .science-info .title {	text-decoration: underline;}
+.science-lists .science-list:hover {background-color: lightpink;}
