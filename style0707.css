@@ -1,0 +1,114 @@
+html, body { margin: 0; padding: 0; }
+.transform {
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+
+/*	transform: rotate(45deg); -> 회전 () 음수는 좌로 회전, 양수는 우로 회전
+	transform: scale(3,2); ->크기를 비율에 맞춰 조정(확대/축소) (x,y) 숫자는 각 축의 배수를 의미
+	transform: skew(10deg, 20deg); -> 3차원으로 회전(x,y) x축으로 회전, y축으로 회전 ->정육면체 구현가능
+	transform: translate(100px,100px); -> object의 위치변경 (x,y) x축으로 이동, y축으로 이동
+	사용시 주의점 : explorer 10.0이상에서만 사용가능
+	그 이하라면 prefix 사용 ->각각 브라우저의 버전을 지칭 하위버전에서 적용할때 사용
+	ex) -webkit- : 크롬, 사파리
+		-moz- : 파이어폭
+		-ms- : 익스플로러
+		-o- : 오페라
+
+		-webkit-transform : rotate(10deg)
+		-moz-transform : rotate(10deg)
+		-ms-transform : rotate(10deg)
+		-o-transform : rotate(10deg)*/
+		transform : rotate(10deg)
+
+
+	/*margin-left: 800px;
+	margin-top: 300px;
+*/
+}
+
+.transition {
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+
+	/*transition-property: width; ->변화하는 값
+	transition-duration: 2s; -> 변화하는 시간
+	transition-timing-function: linear; -> 속도 성향(점점빠르게, 점점느리게, 일정하게 등등)
+	transition-delay: 1s; -> 변화하기전 걸리는 시간*/
+	transition: width 2s linear, height 2s linear;
+}
+
+.transition:hover {
+	width: 600px;
+	height: 600px;
+}
+
+
+.animation {
+	width: 300px;
+	height: 300px;
+	background-color: yellow;
+
+	animation-name: changewidth; -> 원하는 이름으로 설정
+	animation-duration: 3s; -> 효과가 적용되는 시간
+	animation-timing-function: linear; -> 효과의 속도
+	animation-delay: 1s; -> 효과가 적용되기 전 시간
+
+	animation-iteration-count: 6; -> 효과 진행 횟수 infinite(무한으로 진행)
+	animation-direction: normal; -> 효과 진행 방향 normal(기본값), alternate(왕복)
+이때, alternate와 interaction-count영향을 주지는 않는다.
+
+
+}
+
+-> @keyframes 애니메이션이름 {} 으로 애니메이션 상세히 설정 가능
+ from {} to{}
+ 0%{} 50%{} 100%{}
+@keyframes changewidth {
+	0% {
+		width: 300px;
+		height: 300px;
+		background-color: yellow;
+	}
+	50% {
+		background-color: blue;
+	}
+	100% {
+		width: 600px;
+		height: 300px;
+		background-color: red;
+	}
+}
+
+.spin-lion {
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+
+/*	animation-name: spinlion;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;*/
+	-webkit- animation: spinlion 1.5s linear infinite alternate;
+	animation: spinlion 1.5s linear infinite alternate;
+}
+
+@-webkit-keyframes spinlion {
+	from {
+		-webkit-transform: rotate(-10deg);
+	}
+	to {
+		-webkit-transform: rotate(10deg);
+	}
+}
+@keyframes spinlion {
+	from {
+		transform: rotate(-10deg);
+	}
+	to {
+		transform: rotate(10deg);
+	}
+}
+
