@@ -1,0 +1,19 @@
+.animate__animated {
+	margin-top: 200px;
+	margin-left: 200px;
+	animation-iteration-count: infinite;
+}
+.animate__bounceInUp {
+	color: lightgray;
+	background-color: black;
+	width: 35px;
+	margin: 0 auto;
+	animation-iteration-count: infinite;
+}
+.animate__fadeIn {
+	color: darkred;
+	font-size: 300px;
+	margin: 400 auto;
+	animation-iteration-count: infinite;
+	animation-duration: 7s;
+}
